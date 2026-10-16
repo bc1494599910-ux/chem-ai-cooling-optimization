@@ -83,9 +83,9 @@ making the repository public. The implementation was first delivered as commit
   and the implementation's `main` run
   [38901652293](https://github.com/bc1494599910-ux/chem-ai-cooling-optimization/actions/runs/38901652293)
   both passed.
-- Public visibility is authorized but not yet confirmed. The command-line
-  credential has push permission but no repository administration permission.
-  The owner-signed-in GitHub settings page reached the final visibility action,
-  then required owner identity verification at **Confirm access / Verify via
-  email**. No authentication challenge was automated. The repository remains
-  private pending that verification and a confirmed visibility change.
+- Public visibility is confirmed after the owner completed GitHub's identity
+  verification. The settings page reports that the repository is public; an
+  unauthenticated GitHub API request returned `private: false`,
+  `visibility: public`, and `default_branch: main`. An unauthenticated request
+  to the repository page returned HTTP 200. The public entry point is
+  [bc1494599910-ux/chem-ai-cooling-optimization](https://github.com/bc1494599910-ux/chem-ai-cooling-optimization).
