@@ -11,8 +11,9 @@ area/water-flow combinations meeting hot outlet <=55 C. User instructed implemen
 
 - Implemented report reproduction, constant-U one-shell thermal model, grid search,
   independent synthetic splits, linear/MLP comparison, candidate auditing and CLI.
-- Working/delivery branch: `codex/e101-starter`; original planning workflow
-  preserved unchanged locally and excluded from publication with `.gitignore`.
+- Working/delivery branch: `main`; `codex/e101-starter` is retained after its
+  fast-forward merge. The original planning workflow is preserved unchanged
+  locally and excluded from publication with `.gitignore`.
 - Dependency environment created with `uv sync --locked --extra dev` (Python 3.12.14).
 - `python -m pytest -q`: 40 passed after correcting a numerical test tolerance.
   The initial strict monotonicity assertion detected 1.42e-14 C rounding at an
@@ -54,12 +55,12 @@ No real-plant validation, variable-U model, hydraulic feasibility, monetary cost
 or dynamic control has been performed. User learning exercises have not yet been
 performed. The starter implementation and its local reproduction are complete.
 
-## GitHub delivery preparation
+## GitHub delivery
 
 The user explicitly requested original-PDF inclusion, repository preparation,
-commit and push on 2026-10-16. The origin repository was checked as private, with
-push permission available. Delivery targets the existing `codex/e101-starter`
-branch. The default `main` branch was still at the initial commit during preparation.
+commit and push on 2026-10-16, followed by merging into local/GitHub `main` and
+making the repository public. The implementation was first delivered as commit
+`f74d14419d2d0fff1c29f033de8825c49afae103` on `codex/e101-starter`.
 
 - Original PDF copied unchanged to `docs/references/PDC_Final_report.pdf`;
   SHA-256 `a85715d57269ea4b4cd7f9722107100a277f33f1e1119bfa53ac83cb71ae67fd`
@@ -69,4 +70,22 @@ branch. The default `main` branch was still at the initial commit during prepara
 - GitHub Actions workflow added for tests, evidence verification and PDF integrity.
 - Historical run manifests retain their original pre-commit metadata and hashes;
   they are not rewritten to pretend the experiment ran after the delivery commit.
-- Check the branch's Git history and GitHub Actions for the current delivery status.
+- `git fetch origin`, `git switch main`, `git merge --ff-only codex/e101-starter`
+  and `git push origin main` completed successfully. Local `main` and the live
+  remote `refs/heads/main` were verified at the implementation commit above.
+- Before the merge, `uv sync --locked --extra dev` completed and
+  `uv run --extra dev python -m pytest -q` passed all 40 tests in 2.37 seconds.
+  `uv run --locked --extra dev python scripts/verify_results.py results/baseline`
+  verified 8000 unique input rows, 12000 predictions, 76 candidate audits and
+  source/artifact hashes. The source PDF SHA-256 also matched the recorded value.
+- The GitHub default branch is `main`. The initial feature-branch Actions run
+  [38889165441](https://github.com/bc1494599910-ux/chem-ai-cooling-optimization/actions/runs/38889165441)
+  and the implementation's `main` run
+  [38901652293](https://github.com/bc1494599910-ux/chem-ai-cooling-optimization/actions/runs/38901652293)
+  both passed.
+- Public visibility is authorized but not yet confirmed. The command-line
+  credential has push permission but no repository administration permission.
+  The owner-signed-in GitHub settings page reached the final visibility action,
+  then required owner identity verification at **Confirm access / Verify via
+  email**. No authentication challenge was automated. The repository remains
+  private pending that verification and a confirmed visibility change.
