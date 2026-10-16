@@ -1,0 +1,34 @@
+{
+  "config_name": "report_appendix_b",
+  "hot_mass_flow_kg_s": 1.667,
+  "hot_required_W": 262484.9865,
+  "cold_design_W": 262491.45999999996,
+  "design_energy_mismatch_W": -6.473499999963678,
+  "report_average_required_W": 262488.22325,
+  "gross_area_m2": 28.037281867038867,
+  "effective_area_m2": 27.547012457342014,
+  "LMTD_K": 41.470373970313666,
+  "F_at_design_endpoints": 0.9586650846574203,
+  "tube_Re": 32238.943683246103,
+  "shell_Re": 205.848381383958,
+  "tube_h_W_m2_K": 6767.268563375863,
+  "shell_h_W_m2_K": 363.39781673427905,
+  "overall_U_W_m2_K": 282.69921630282164,
+  "capacity_at_design_endpoints_gross_W": 315112.31358509924,
+  "capacity_at_design_endpoints_effective_W": 309602.15291038714,
+  "printed_shell_friction_audit": {
+    "f1_recalculated": 0.00890072204146234,
+    "f1_reported": 0.00520571,
+    "f2_recalculated": 0.0019832400486164744,
+    "f2_reported": 0.0010765,
+    "fs_recalculated": 1.2785570866705527,
+    "fs_reported": 0.479125,
+    "status": "unresolved; excluded from design feasibility"
+  },
+  "limitations": [
+    "Source property references not independently revalidated",
+    "Tube fouling resistance area basis unresolved",
+    "Shell pressure-drop printed equations do not reproduce reported numbers",
+    "Correlation validity outside the reported baseline is not established"
+  ]
+}

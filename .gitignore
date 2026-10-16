@@ -218,3 +218,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project-local environments, private course material and exploratory runs.
+/.venv-verify/
+/private_materials/
+/runs/
+/tmp/
+
+# Preserve the original local planning prompt without publishing application context.
+/Project3_AI_Workflow.md

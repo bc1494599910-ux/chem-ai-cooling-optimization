@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling>=1.26,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "chem-ai-cooling-optimization"
+version = "0.1.0"
+description = "Reproducible E-101 heat-transfer modelling and surrogate-assisted design study"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "numpy>=2.0,<3",
+  "scipy>=1.13,<2",
+  "scikit-learn>=1.5,<2",
+  "matplotlib>=3.9,<4",
+  "threadpoolctl>=3.5,<4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ht>=1.1,<2"]
+
+[project.scripts]
+cooling = "cooling_project.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cooling_project"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+

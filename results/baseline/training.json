@@ -1,0 +1,33 @@
+{
+  "selected_model": "mlp_seed_27",
+  "fits": [
+    {
+      "model": "linear",
+      "training_seconds": 0.007111400000212598,
+      "validation_mae_C": 1.9594090579271728,
+      "iterations": null,
+      "warnings": []
+    },
+    {
+      "model": "mlp_seed_7",
+      "training_seconds": 2.260406100000182,
+      "validation_mae_C": 0.016973453960734596,
+      "iterations": 396,
+      "warnings": []
+    },
+    {
+      "model": "mlp_seed_17",
+      "training_seconds": 2.194018500000311,
+      "validation_mae_C": 0.022370809699236355,
+      "iterations": 369,
+      "warnings": []
+    },
+    {
+      "model": "mlp_seed_27",
+      "training_seconds": 2.87071239999932,
+      "validation_mae_C": 0.015327447806732557,
+      "iterations": 513,
+      "warnings": []
+    }
+  ]
+}

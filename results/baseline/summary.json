@@ -1,0 +1,357 @@
+{
+  "status": "completed",
+  "model_version": "e101-one-shell-constant-u-v1",
+  "selected_model": "mlp_seed_27",
+  "reference_is_plant_truth": false,
+  "data_counts": {
+    "train": 4000,
+    "validation": 1000,
+    "test": 1000,
+    "boundary_test": 1000,
+    "extrapolation_test": 1000
+  },
+  "baseline": {
+    "area_m2": 27.547012457342014,
+    "cold_flow_kg_s": 8.971,
+    "cold_inlet_C": 33.0,
+    "hot_out_C": 51.16227095174445,
+    "cold_out_C": 40.48675621323551,
+    "heat_kW": 280.74422415375136
+  },
+  "nominal_required_heat_kW": 262.4325,
+  "metrics": {
+    "linear": {
+      "test": {
+        "n": 1000,
+        "mae_C": 1.9096871236524124,
+        "rmse_C": 2.3721887274359044,
+        "absolute_error_p95_C": 4.260668833785635,
+        "max_absolute_error_C": 10.25206171407693,
+        "max_optimistic_error_C": 10.25206171407693,
+        "predicted_feasible_n": 438,
+        "false_accept_n": 15,
+        "false_accept_rate": 0.03424657534246575,
+        "reference_feasible_n": 495,
+        "false_reject_n": 72,
+        "false_reject_rate_among_reference_feasible": 0.14545454545454545,
+        "guarded_classification": {
+          "predicted_feasible_n": 205,
+          "false_accept_n": 2,
+          "false_accept_rate": 0.00975609756097561,
+          "reference_feasible_n": 495,
+          "false_reject_n": 292,
+          "false_reject_rate_among_reference_feasible": 0.5898989898989899
+        }
+      },
+      "boundary_test": {
+        "n": 1000,
+        "mae_C": 2.532082970774991,
+        "rmse_C": 2.9600699115266838,
+        "absolute_error_p95_C": 5.702130804565713,
+        "max_absolute_error_C": 9.985765225851061,
+        "max_optimistic_error_C": 9.985765225851061,
+        "predicted_feasible_n": 202,
+        "false_accept_n": 76,
+        "false_accept_rate": 0.37623762376237624,
+        "reference_feasible_n": 498,
+        "false_reject_n": 372,
+        "false_reject_rate_among_reference_feasible": 0.7469879518072289,
+        "guarded_classification": {
+          "predicted_feasible_n": 34,
+          "false_accept_n": 9,
+          "false_accept_rate": 0.2647058823529412,
+          "reference_feasible_n": 498,
+          "false_reject_n": 473,
+          "false_reject_rate_among_reference_feasible": 0.9497991967871486
+        }
+      },
+      "extrapolation_test": {
+        "n": 1000,
+        "mae_C": 1.9076512197230178,
+        "rmse_C": 2.31094571386881,
+        "absolute_error_p95_C": 4.146684424441335,
+        "max_absolute_error_C": 8.309278423358116,
+        "max_optimistic_error_C": 8.309278423358116,
+        "predicted_feasible_n": 334,
+        "false_accept_n": 31,
+        "false_accept_rate": 0.09281437125748503,
+        "reference_feasible_n": 347,
+        "false_reject_n": 44,
+        "false_reject_rate_among_reference_feasible": 0.12680115273775217,
+        "guarded_classification": {
+          "predicted_feasible_n": 110,
+          "false_accept_n": 1,
+          "false_accept_rate": 0.00909090909090909,
+          "reference_feasible_n": 347,
+          "false_reject_n": 238,
+          "false_reject_rate_among_reference_feasible": 0.6858789625360231
+        }
+      }
+    },
+    "mlp_seed_7": {
+      "test": {
+        "n": 1000,
+        "mae_C": 0.0176533032489208,
+        "rmse_C": 0.029319158184196222,
+        "absolute_error_p95_C": 0.048300927490019054,
+        "max_absolute_error_C": 0.3386720152011833,
+        "max_optimistic_error_C": 0.3386720152011833,
+        "predicted_feasible_n": 495,
+        "false_accept_n": 1,
+        "false_accept_rate": 0.00202020202020202,
+        "reference_feasible_n": 495,
+        "false_reject_n": 1,
+        "false_reject_rate_among_reference_feasible": 0.00202020202020202
+      },
+      "boundary_test": {
+        "n": 1000,
+        "mae_C": 0.024239261338550092,
+        "rmse_C": 0.043700773333993415,
+        "absolute_error_p95_C": 0.06770885394151874,
+        "max_absolute_error_C": 0.40339755818486367,
+        "max_optimistic_error_C": 0.40339755818486367,
+        "predicted_feasible_n": 501,
+        "false_accept_n": 9,
+        "false_accept_rate": 0.017964071856287425,
+        "reference_feasible_n": 498,
+        "false_reject_n": 6,
+        "false_reject_rate_among_reference_feasible": 0.012048192771084338
+      },
+      "extrapolation_test": {
+        "n": 1000,
+        "mae_C": 0.06765192040303353,
+        "rmse_C": 0.09123200351162289,
+        "absolute_error_p95_C": 0.18289411616731713,
+        "max_absolute_error_C": 0.4891196567185574,
+        "max_optimistic_error_C": 0.4891196567185574,
+        "predicted_feasible_n": 348,
+        "false_accept_n": 1,
+        "false_accept_rate": 0.0028735632183908046,
+        "reference_feasible_n": 347,
+        "false_reject_n": 0,
+        "false_reject_rate_among_reference_feasible": 0.0
+      }
+    },
+    "mlp_seed_17": {
+      "test": {
+        "n": 1000,
+        "mae_C": 0.022437513971539872,
+        "rmse_C": 0.034470929054024546,
+        "absolute_error_p95_C": 0.06219077968901452,
+        "max_absolute_error_C": 0.34018496769458295,
+        "max_optimistic_error_C": 0.34018496769458295,
+        "predicted_feasible_n": 497,
+        "false_accept_n": 2,
+        "false_accept_rate": 0.004024144869215292,
+        "reference_feasible_n": 495,
+        "false_reject_n": 0,
+        "false_reject_rate_among_reference_feasible": 0.0
+      },
+      "boundary_test": {
+        "n": 1000,
+        "mae_C": 0.03262741112936465,
+        "rmse_C": 0.05351046632835822,
+        "absolute_error_p95_C": 0.08142143151891475,
+        "max_absolute_error_C": 0.4109607547142886,
+        "max_optimistic_error_C": 0.4109607547142886,
+        "predicted_feasible_n": 503,
+        "false_accept_n": 11,
+        "false_accept_rate": 0.02186878727634195,
+        "reference_feasible_n": 498,
+        "false_reject_n": 6,
+        "false_reject_rate_among_reference_feasible": 0.012048192771084338
+      },
+      "extrapolation_test": {
+        "n": 1000,
+        "mae_C": 0.05854228629812299,
+        "rmse_C": 0.0759686446838977,
+        "absolute_error_p95_C": 0.15241195674984445,
+        "max_absolute_error_C": 0.39227839341665316,
+        "max_optimistic_error_C": 0.39227839341665316,
+        "predicted_feasible_n": 348,
+        "false_accept_n": 1,
+        "false_accept_rate": 0.0028735632183908046,
+        "reference_feasible_n": 347,
+        "false_reject_n": 0,
+        "false_reject_rate_among_reference_feasible": 0.0
+      }
+    },
+    "mlp_seed_27": {
+      "test": {
+        "n": 1000,
+        "mae_C": 0.01486763102417808,
+        "rmse_C": 0.02039301270477755,
+        "absolute_error_p95_C": 0.037959623495428106,
+        "max_absolute_error_C": 0.14164165836179876,
+        "max_optimistic_error_C": 0.14164165836179876,
+        "predicted_feasible_n": 496,
+        "false_accept_n": 1,
+        "false_accept_rate": 0.0020161290322580645,
+        "reference_feasible_n": 495,
+        "false_reject_n": 0,
+        "false_reject_rate_among_reference_feasible": 0.0,
+        "guarded_classification": {
+          "predicted_feasible_n": 494,
+          "false_accept_n": 1,
+          "false_accept_rate": 0.0020242914979757085,
+          "reference_feasible_n": 495,
+          "false_reject_n": 2,
+          "false_reject_rate_among_reference_feasible": 0.00404040404040404
+        }
+      },
+      "boundary_test": {
+        "n": 1000,
+        "mae_C": 0.017193392745026487,
+        "rmse_C": 0.026020941563438347,
+        "absolute_error_p95_C": 0.04554674495052566,
+        "max_absolute_error_C": 0.23345759313642844,
+        "max_optimistic_error_C": 0.23345759313642844,
+        "predicted_feasible_n": 500,
+        "false_accept_n": 6,
+        "false_accept_rate": 0.012,
+        "reference_feasible_n": 498,
+        "false_reject_n": 4,
+        "false_reject_rate_among_reference_feasible": 0.008032128514056224,
+        "guarded_classification": {
+          "predicted_feasible_n": 474,
+          "false_accept_n": 2,
+          "false_accept_rate": 0.004219409282700422,
+          "reference_feasible_n": 498,
+          "false_reject_n": 26,
+          "false_reject_rate_among_reference_feasible": 0.05220883534136546
+        }
+      },
+      "extrapolation_test": {
+        "n": 1000,
+        "mae_C": 0.04630392820378674,
+        "rmse_C": 0.06611519521881444,
+        "absolute_error_p95_C": 0.14674647466903606,
+        "max_absolute_error_C": 0.274830422957308,
+        "max_optimistic_error_C": 0.2550275924805874,
+        "predicted_feasible_n": 348,
+        "false_accept_n": 1,
+        "false_accept_rate": 0.0028735632183908046,
+        "reference_feasible_n": 347,
+        "false_reject_n": 0,
+        "false_reject_rate_among_reference_feasible": 0.0,
+        "guarded_classification": {
+          "predicted_feasible_n": 344,
+          "false_accept_n": 0,
+          "false_accept_rate": 0.0,
+          "reference_feasible_n": 347,
+          "false_reject_n": 3,
+          "false_reject_rate_among_reference_feasible": 0.008645533141210375
+        }
+      }
+    }
+  },
+  "margins": {
+    "linear": {
+      "margin_C": 6.8782614150666515,
+      "validation_one_sided_quantile_C": 6.8782614150666515,
+      "validation_design_max_optimistic_error_C": 5.302430926778278,
+      "validation_design_candidates": 9,
+      "coverage_guarantee": false
+    },
+    "mlp_seed_27": {
+      "margin_C": 0.05623373692570524,
+      "validation_one_sided_quantile_C": 0.05623373692570524,
+      "validation_design_max_optimistic_error_C": 0.016684021247428404,
+      "validation_design_candidates": 9,
+      "coverage_guarantee": false
+    }
+  },
+  "design_summary": {
+    "linear": {
+      "direct": {
+        "cases": 6,
+        "reference_feasible_cases": 6,
+        "missing_candidates": 0,
+        "rejected_candidates": 0,
+        "mean_gap_on_feasible_cases_pct": 0.0,
+        "max_gap_on_feasible_cases_pct": 0.0
+      },
+      "surrogate_raw": {
+        "cases": 6,
+        "reference_feasible_cases": 0,
+        "missing_candidates": 0,
+        "rejected_candidates": 6,
+        "mean_gap_on_feasible_cases_pct": null,
+        "max_gap_on_feasible_cases_pct": null
+      },
+      "surrogate_margin_verify": {
+        "cases": 6,
+        "reference_feasible_cases": 6,
+        "missing_candidates": 0,
+        "rejected_candidates": 52,
+        "mean_gap_on_feasible_cases_pct": 15.756895303574654,
+        "max_gap_on_feasible_cases_pct": 32.7827168461285
+      }
+    },
+    "mlp_seed_27": {
+      "direct": {
+        "cases": 6,
+        "reference_feasible_cases": 6,
+        "missing_candidates": 0,
+        "rejected_candidates": 0,
+        "mean_gap_on_feasible_cases_pct": 0.0,
+        "max_gap_on_feasible_cases_pct": 0.0
+      },
+      "surrogate_raw": {
+        "cases": 6,
+        "reference_feasible_cases": 4,
+        "missing_candidates": 0,
+        "rejected_candidates": 2,
+        "mean_gap_on_feasible_cases_pct": 0.14042616639838856,
+        "max_gap_on_feasible_cases_pct": 0.5617046655935543
+      },
+      "surrogate_margin_verify": {
+        "cases": 6,
+        "reference_feasible_cases": 6,
+        "missing_candidates": 0,
+        "rejected_candidates": 0,
+        "mean_gap_on_feasible_cases_pct": 0.1599398087299734,
+        "max_gap_on_feasible_cases_pct": 0.5617046655935543
+      }
+    }
+  },
+  "training": [
+    {
+      "model": "linear",
+      "training_seconds": 0.007111400000212598,
+      "validation_mae_C": 1.9594090579271728,
+      "iterations": null,
+      "warnings": []
+    },
+    {
+      "model": "mlp_seed_7",
+      "training_seconds": 2.260406100000182,
+      "validation_mae_C": 0.016973453960734596,
+      "iterations": 396,
+      "warnings": []
+    },
+    {
+      "model": "mlp_seed_17",
+      "training_seconds": 2.194018500000311,
+      "validation_mae_C": 0.022370809699236355,
+      "iterations": 369,
+      "warnings": []
+    },
+    {
+      "model": "mlp_seed_27",
+      "training_seconds": 2.87071239999932,
+      "validation_mae_C": 0.015327447806732557,
+      "iterations": 513,
+      "warnings": []
+    }
+  ],
+  "data_generation_seconds_all_splits": 0.006626499999583757,
+  "training_seconds_all_candidates": 7.332248400000026,
+  "margin_calibration_seconds": 0.04282870000042749,
+  "test_seed_mae_range_C": [
+    0.01486763102417808,
+    0.022437513971539872
+  ],
+  "timing_interpretation": "Inference and full-search timings exclude offline preparation. All preparation costs are reported separately. No speedup is assumed.",
+  "scope": "finite grid, equivalent active area, constant U/Cp, cooling capability only; no hydraulic or physical equipment validation"
+}

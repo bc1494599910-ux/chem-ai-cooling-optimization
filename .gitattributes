@@ -1,0 +1,10 @@
+# Keep executable sources identical across Windows and Linux checkouts.
+* text=auto eol=lf
+
+# Saved evidence is hashed byte-for-byte, including CSV line endings.
+results/** -text whitespace=cr-at-eol
+*.pdf -text
+*.png -text
+
+# Preserve the exact build metadata already recorded in experiment source hashes.
+pyproject.toml whitespace=-blank-at-eof

@@ -1,0 +1,45 @@
+{
+  "date_local": "2026-10-16",
+  "timezone": "Asia/Shanghai",
+  "status": "passed",
+  "primary_environment": ".venv",
+  "second_new_environment": ".venv-verify",
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "threadpoolctl": "3.7.0"
+  },
+  "pytest": {
+    "primary_passed": 40,
+    "second_environment_passed": 40,
+    "command": "python -m pytest -q",
+    "exit_codes": [
+      0,
+      0
+    ]
+  },
+  "full_experiment_exit_codes": [
+    0,
+    0
+  ],
+  "audit_command": "python scripts/verify_results.py results/baseline runs/reproduction",
+  "audit_exit_code": 0,
+  "unique_input_rows_each": 8000,
+  "prediction_rows_each": 12000,
+  "candidate_audit_rows_each": 76,
+  "matching_source_set_sha256": "193979ec856eed8b55d9ad95a8b7e9055d26ecbc1bd0ba715f75585d9fb7cbcf",
+  "matching_artifact_sha256": {
+    "dataset.csv": "b322befcc8481eb88b874ca176caf7e316e551e489c35d3fdb7957a5add9d2a5",
+    "predictions.csv": "95d8edcd019bf34971bb70fb3f4db484566a56cd669365ad8c0449136019c9e8",
+    "pareto.csv": "ff0a38f338896f8db0db9ca6a3a3cf59187d34a163cc8c857fd99e77a8af1af8",
+    "candidate_audits.csv": "48c11b8f52c47bfe2730d42fb9fa60f5219adae50ac4a19b4c5a3a2b287b344b"
+  },
+  "numerical_metrics_selection_baseline_margins_and_design_summaries": "exact match",
+  "timing_comparison": "not expected to match; observations kept in each run",
+  "primary_manifest_sha256": "2c050f22a5a3b555afe4d1f49409b7d932d7cd071e379d95455fb37766bff9cb",
+  "second_manifest_sha256": "d408c73dae99c9bc247d97ce0880c63ee30159aacc3ab1dd6eae846c7b3fe540",
+  "scope": "same source working tree, separate fresh dependency environment; not a separate operating system or real-plant validation"
+}

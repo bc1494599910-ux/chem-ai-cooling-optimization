@@ -1,0 +1,20 @@
+{
+  "selected_model": "mlp_seed_27",
+  "margins": {
+    "linear": {
+      "margin_C": 6.8782614150666515,
+      "validation_one_sided_quantile_C": 6.8782614150666515,
+      "validation_design_max_optimistic_error_C": 5.302430926778278,
+      "validation_design_candidates": 9,
+      "coverage_guarantee": false
+    },
+    "mlp_seed_27": {
+      "margin_C": 0.05623373692570524,
+      "validation_one_sided_quantile_C": 0.05623373692570524,
+      "validation_design_max_optimistic_error_C": 0.016684021247428404,
+      "validation_design_candidates": 9,
+      "coverage_guarantee": false
+    }
+  },
+  "selection_basis": "validation only; final tests not used"
+}

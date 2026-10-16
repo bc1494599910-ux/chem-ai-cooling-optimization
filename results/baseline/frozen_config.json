@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "model_version": "e101-one-shell-constant-u-v1",
+  "source_basis": "PDC Appendix B; project mass flow is exactly 6000/3600 kg/s",
+  "physics": {
+    "hot_mass_flow_kg_h": 6000.0,
+    "hot_inlet_C": 110.0,
+    "hot_cp_J_kg_K": 2862.9,
+    "cold_cp_J_kg_K": 4180.0,
+    "overall_U_W_m2_K": 282.6992163028217,
+    "target_C": 55.0,
+    "baseline_area_m2": 27.547012457342014,
+    "baseline_cold_flow_kg_s": 8.971,
+    "baseline_cold_inlet_C": 33.0,
+    "area_basis": "active outside heat-transfer area; baseline deducts provisional 32 mm per tube end",
+    "U_basis": "Appendix B.7 printed fouling convention; tube fouling area basis unresolved",
+    "flow_arrangement": "idealized one TEMA E shell pass, even tube passes (report: four)"
+  },
+  "experiment": {
+    "bounds": {
+      "area_m2": [
+        10.0,
+        40.0
+      ],
+      "cold_flow_kg_s": [
+        2.0,
+        12.0
+      ],
+      "cold_inlet_C": [
+        28.0,
+        35.0
+      ]
+    },
+    "bounds_status": "project experimental choices, not certified equipment operating limits",
+    "data_seed": 20261016,
+    "n_train": 4000,
+    "n_validation": 1000,
+    "n_test": 1000,
+    "n_boundary_test": 1000,
+    "boundary_half_width_C": 1.0,
+    "n_extrapolation_test": 1000,
+    "extrapolation_cold_inlet_C": [
+      36.0,
+      38.0
+    ],
+    "grid_points_per_axis": 101,
+    "design_validation_temperatures_C": [
+      29.0,
+      33.0,
+      35.0
+    ],
+    "design_test_temperatures_C": [
+      30.0,
+      34.0
+    ],
+    "area_weights": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "surrogate": {
+      "hidden_layer_sizes": [
+        32,
+        32
+      ],
+      "activation": "tanh",
+      "solver": "lbfgs",
+      "alpha": 0.0001,
+      "max_iter": 1500,
+      "max_fun": 20000,
+      "tol": 1e-06,
+      "seeds": [
+        7,
+        17,
+        27
+      ],
+      "selection_metric": "validation MAE only"
+    },
+    "margin_quantile": 0.99,
+    "margin_rule": "max(0, validation one-sided error quantile, max optimistic error at unguarded validation-design choices)",
+    "timing": {
+      "warmups": 3,
+      "repeats": 11,
+      "single_calls_per_repeat": 100,
+      "batch_size": 10000
+    },
+    "blas_threads": 1
+  }
+}
